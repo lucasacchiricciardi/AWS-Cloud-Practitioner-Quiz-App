@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <svg class="aws-logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 16.2c-.5.5-.5 1.4 0 1.9s1.4.5 1.9 0L17.8 19.2z"/><line x1="16" y1="11" x2="21" y2="16"/></svg>
+                <h1>AWS Practitioner <span class="highlight">Mastery</span></h1>
+            </div>
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value" id="progress-text">0 / 0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="score-text">0%</span>
+                </div>
+                <button id="reset-btn" class="nav-btn secondary" title="Reset Progress">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="quiz-card glass">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div id="quiz-content">
+                <div class="question-header">
+                    <span class="question-number" id="q-number">Question 1</span>
+                </div>
+                <h2 class="question-text" id="question-text">Loading question...</h2>
+                
+                <div class="options-grid" id="options-container">
+                    <!-- Options injected by JS -->
+                </div>
+
+                <div class="feedback-area hidden" id="feedback-area">
+                    <div class="feedback-icon" id="feedback-icon"></div>
+                    <div class="feedback-text" id="feedback-text"></div>
+                    <div class="feedback-explanation" id="feedback-explanation"></div>
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                <div class="spacer"></div>
+                <button id="next-btn" class="nav-btn primary">Skip</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Designed for AWS Excellence</p>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
