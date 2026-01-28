@@ -1,2 +1,5 @@
 risorse/
 *.py
+.env
+risultat*
+extracted*
